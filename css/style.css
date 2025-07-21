@@ -1,0 +1,652 @@
+:root {
+  --text-color: rgb(53, 53, 100);
+  --hover-color: #7979ff;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Signika Negative", sans-serif !important;
+  /* height: 10000px; */
+  /* padding-top: 10px; */
+}
+
+/* ================================ HEADER =============================== */
+
+.navbar {
+  background-color: white !important;
+  font-weight: 600;
+  font-size: 22px;
+  padding: 0;
+}
+.navbar > .container-fluid {
+  background-color: white;
+  padding: 10px;
+  /* border-bottom: 1px solid var(--text-color); */
+}
+
+.navbar .container-fluid .collapse ul li a {
+  color: rgb(53, 53, 100) !important;
+}
+
+.navbar .container-fluid .collapse ul li a:hover {
+  color: var(--hover-color) !important;
+}
+
+.navbar .container-fluid .logo-img img {
+  width: 200px;
+  border-right: 2px solid var(--text-color);
+  padding-right: 25px;
+}
+
+.logo-name {
+  border-right: 2px solid var(--text-color);
+}
+
+.drowb ul li a {
+  font-size: 20px;
+  transition-duration: 0.3s;
+}
+
+.drowb ul li a:hover {
+  padding-left: 20px;
+}
+
+.btn-nav {
+  color: var(--text-color);
+  outline: 1px solid var(--text-color);
+  padding: 1px 15px !important;
+  transition-duration: 0.3s;
+}
+
+.btn-nav:hover {
+  color: white;
+  background-color: var(--hover-color);
+  outline: 1px solid var(--hover-color);
+}
+
+.search-nav {
+  border-radius: 10px;
+  border: 1px solid var(--text-color);
+  padding: 5px 5px;
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+.search-nav:focus {
+  /* border: none; */
+  outline: 2px solid var(--hover-color);
+}
+
+.dropdown-menu {
+  border-radius: 10px !important;
+  border: 1px solid var(--text-color);
+  width: 200px;
+}
+
+.dropdown-menu .hr-drop hr {
+  color: var(--text-color) !important;
+}
+
+/* =============== LOGIN MODEL ======================= */
+
+.modal-backdrop {
+  z-index: 1050 !important;
+}
+
+.modal {
+  z-index: 1100 !important;
+}
+
+.modal-dialog {
+  position: relative;
+  z-index: 100;
+}
+
+.modal-header .modal-title {
+  color: var(--text-color) !important;
+  font-size: 25px !important;
+  font-weight: 500 !important;
+}
+
+.modal-header .btn-close {
+  color: var(--text-color) !important;
+}
+
+.modal-body .form-label,
+.modal-body .form-check-label {
+  color: var(--text-color) !important;
+}
+
+.form-check .form-check-input {
+  color: var(--hover-color) !important;
+}
+
+.form-check .form-check-input:checked {
+  background-color: var(--hover-color) !important;
+}
+
+.modal-body .footer-login button {
+  color: white !important;
+  background-color: var(--hover-color) !important;
+  transition-duration: 0.5s;
+}
+
+.modal-body .footer-login button:hover {
+  opacity: 0.9;
+}
+
+.carousel .carousel-inner .carousel-item img {
+  width: 100% !important;
+  height: 100vh !important;
+}
+
+.carousel .carousel-inner .carousel-item .carousel-caption {
+  background-color: #7979ffa8 !important;
+  border-radius: 15px;
+  height: 230px;
+  padding: 40px 0;
+  font-size: 25px;
+}
+
+.carousel .carousel-inner .carousel-item .carousel-caption button {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  outline: 1px solid rgb(95 95 242);
+  background-color: rgb(95 95 242);
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  width: 140px;
+  margin-bottom: 20px;
+  transition-duration: 0.3s;
+}
+
+.carousel .carousel-inner .carousel-item .carousel-caption button:hover {
+  background-color: white;
+  color: rgb(95 95 242);
+}
+
+.carousel-inner {
+  position: relative;
+}
+.carousel-inner .icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 60px;
+  padding: 10px;
+  right: 0;
+  margin-right: 30px;
+  margin-top: 80px;
+  position: fixed;
+  z-index: 99;
+}
+
+.carousel-inner .icons a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 50px;
+  margin-bottom: 0px;
+  transition-duration: 0.3s;
+}
+.carousel-inner .icons a:hover {
+  color: var(--hover-color);
+}
+
+/* خلي الـ navbar أقل من المودال */
+.navbar.fixed-top {
+  z-index: 1040; /* أقل من المودال */
+}
+
+/* خلي خلفية المودال تطلع فوق الـ navbar */
+.modal-backdrop.show {
+  z-index: 1050 !important;
+}
+
+/* خلي المودال نفسه فوق الكل */
+.modal {
+  z-index: 1060 !important;
+}
+
+/* ============================= WELCOM SECTION ========================== */
+.welcom {
+  padding: 10px 30px;
+}
+.welcom h3 {
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--hover-color);
+  text-shadow: 1px 1px 15px var(--hover-color);
+}
+
+.welcom p {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.welcom button {
+  /* width: 130px;
+    height: 40px; */
+  text-transform: capitalize;
+  font-size: 20px;
+  /* font-weight: bold; */
+  border-radius: 10px;
+  padding: 8px 30px;
+  border: none;
+  outline: 2px solid var(--hover-color);
+  color: white;
+  background-color: var(--hover-color);
+  transition-duration: 0.3s;
+}
+
+.welcom button:hover {
+  background-color: white;
+  color: var(--hover-color);
+}
+
+/* ================================ Popular Section ======================= */
+.popular {
+  background-color: rgb(69 69 157);
+  color: white;
+  height: 100px;
+  border-radius: 10px;
+}
+.accordion .accordion-item {
+  border-bottom: none;
+}
+.accordion .accordion-item .accordion-header button {
+  font-size: 30px;
+  padding: 15px 25px;
+  font-weight: 600;
+  /* color: var(--text-color); */
+  color: rgb(118 118 236);
+}
+
+.accordion .accordion-item .accordion-header button {
+  box-shadow: inset 0px 9px 15px -11px var(--text-color) !important;
+}
+
+.accordion .accordion-item .accordion-collapse .accordion-body {
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+/* ========================= Translate Section ========================== */
+
+.translate {
+  background-color: rgb(69 69 157);
+  color: white;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.translate-form {
+  padding: 10px 30px;
+  margin-top: 30px;
+}
+
+.translate-form p {
+  font-size: 30px;
+  font-weight: 500;
+  color: rgb(69 69 157);
+}
+
+.translate-form p span {
+  color: #7979ff;
+}
+
+.translate-form .copy-btn {
+  text-transform: capitalize;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 8px 30px;
+  border: none;
+  outline: 2px solid var(--hover-color);
+  color: white;
+  background-color: var(--hover-color);
+  transition-duration: 0.3s;
+}
+
+.translate-form .copy-btn:hover {
+  background-color: white;
+  color: var(--hover-color);
+}
+
+.translate-form .modal .modal-dialog .modal-content .modal-footer button {
+  text-transform: capitalize;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 5px 15px !important;
+  border: none;
+  outline: 2px solid var(--hover-color);
+  color: white;
+  background-color: var(--hover-color);
+  transition-duration: 0.3s;
+}
+
+.translate-form .modal .modal-dialog .modal-content .modal-footer button:hover {
+  opacity: 0.7;
+}
+
+.translate-form textarea {
+  color: var(--text-color);
+  font-size: 20px;
+  border: 1px solid var(--hover-color);
+}
+
+/* ======================     ================= */
+
+.img-bc {
+  height: 350px;
+  border-radius: 10px;
+  background-image: url(../Images/cats.png);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* ========================== Row Section ========================== */
+
+.row .card {
+  /* border: 1px solid rgb(69 69 157); */
+  box-shadow: 1px 1px 40px -7px #3c3c99;
+}
+
+.row .card img {
+  height: 400px !important;
+}
+
+.row .card .card-body .content a {
+  background-color: rgb(69 69 157) !important;
+  color: white;
+  outline: 1px solid rgb(69 69 157);
+  position: relative;
+  z-index: 3;
+}
+
+.card-animal-section {
+  position: relative;
+}
+
+.card-animal-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-radius: 10px;
+  background-color: #7979ff40;
+  transition-duration: 0.7s;
+}
+
+.card-animal-section::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-radius: 10px;
+  background-color: #7979ff40;
+  transition-duration: 0.7s;
+}
+
+.card-animal-section:hover::after,
+.card-animal-section:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+.card-animal-section-body a {
+  position: relative;
+  z-index: 5;
+}
+
+/* ==============================   ===================== */
+.img-bc2 {
+  background-image: url(../Images/Dogs-Section.png);
+}
+
+/* ================================== */
+
+.thanks-card {
+  border-radius: 15px;
+  background-image: url(../Images/backgroun-thanks-card.png);
+  background-size: cover;
+  position: relative;
+  border: none;
+  transition-duration: 0.7s;
+}
+
+.thanks-card:hover {
+  transform: scale(0.95);
+  cursor: pointer;
+}
+.thanks-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #6868d086;
+  border-radius: 10px;
+  transition-duration: 0.7s;
+}
+.thanks-card:hover::after {
+  background-color: #6868d0d5;
+}
+.thanks-card .footer,
+.thanks-card .hesder {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  position: relative;
+  z-index: 4;
+}
+.thanks-card .footer img {
+  width: 150px;
+  height: 150px !important;
+  border-radius: 50%;
+  margin-top: 200px;
+  position: relative;
+  z-index: 4;
+  margin-left: -14px;
+  border: 1px solid var(--hover-color);
+}
+
+/* ======================== INFRMATION SECTION ==================== */
+
+.info-title h2 {
+  color: var(--hover-color);
+  font-size: 40px !important;
+  font-weight: 500;
+  text-shadow: 1px 1px 15px var(--hover-color);
+}
+
+.item-info {
+  height: 350px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 40px -7px #3c3c99;
+  overflow: hidden;
+}
+
+.item-info .item-info-content .bottom-section button {
+  border: none;
+  outline: 1px solid var(--hover-color);
+  color: white;
+  background-color: var(--hover-color);
+  transition-duration: 0.3s;
+}
+
+.item-info .item-info-content .bottom-section button:hover {
+  background-color: rgb(88, 88, 205);
+  outline-color: rgb(88, 88, 205);
+}
+
+.item-info .item-info-content .top-section .line {
+  position: relative;
+}
+
+.item-info .item-info-content .top-section .line::after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  bottom: -10px;
+  height: 5px;
+  width: 40px;
+  background-color: #7979ff;
+  border-radius: 10px;
+  transition-duration: 0.4s;
+}
+
+.item-info .item-info-content:hover .line::after {
+  width: 160px;
+}
+
+.item-info .item-info-img .right-side {
+  height: 100%;
+  width: auto;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 10% 100%);
+}
+.item-info .item-info-img .left-side {
+  height: 100%;
+  width: fit-content;
+  clip-path: polygon(0 0, 100% 0, 88% 100%, 0 100%);
+}
+
+/* ============================ JOIN SECTION ================================= */
+
+.item-icon {
+  width: 230px;
+  height: 230px;
+  box-shadow: 1px 1px 40px -7px #3c3c99;
+  border-radius: 15px;
+  transition-duration: 0.5s;
+}
+
+.item-icon:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.item-icon img {
+  width: 180px;
+  height: 180px;
+  margin-top: -3px;
+}
+
+.item-icon .dif-img {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.item-icon h3 {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.item-icon a {
+  font-weight: 600;
+  text-decoration: none;
+  color: #7979ff;
+  text-shadow: 1px 1px 15px var(--hover-color);
+  font-size: 19px;
+}
+
+/* ============================ JOIN SECTION ================================= */
+
+/* ============================ FOOTER SECTION =============================== */
+.footer-Section {
+  background-color: #4f4fffa8;
+}
+
+.footer-Section .row .footer-item {
+  color: white;
+}
+.footer-Section .row .footer-item .header-footer-item {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+.footer-Section .row .footer-item .body-footer-item ul {
+  list-style: none;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.footer-Section .row .footer-item .body-footer-item ul li {
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.footer-Section .row .footer-item .body-footer-item ul li:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+.footer-Section .row .footer-item .header-footer-item svg {
+  color: white;
+  font-size: 25px;
+  text-shadow: 1px 1px 15px white;
+}
+
+.copy-right {
+  color: white;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.copy-right p {
+  text-shadow: 1px 1px 10px rgb(221, 221, 221);
+}
+
+.footer-content {
+  border-bottom: 1px solid white;
+}
+/* ============================ FOOTER SECTION =============================== */
+@media (max-width: 768px) {
+  .product-cards {
+    padding: 20px;
+  }
+  .odd {
+    display: flex !important ;
+    flex-direction: column-reverse;
+    height: 50%;
+  }
+  .even {
+    display: flex !important ;
+    flex-direction: column;
+    height: 50%;
+  }
+  .item-info .item-info-img {
+    margin: 0 !important;
+  }
+  .item-info .item-info-img img {
+    width: 100% !important;
+    height: 252px !important;
+    clip-path: none !important;
+  }
+}
+
+/* تخصيص التولتيب */
+.tooltip-inner {
+  background-color: white !important;
+  color: #797979 !important;
+  border: 1px solid #797979;
+  font-weight: bold;
+}
+
+/* تعديل السهم بتاع التولتيب */
+.bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow::before,
+.bs-tooltip-end .tooltip-arrow::before,
+.bs-tooltip-start .tooltip-arrow::before,
+.bs-tooltip-top .tooltip-arrow::before,
+.bs-tooltip-bottom .tooltip-arrow::before {
+  border-color: white !important;
+}
